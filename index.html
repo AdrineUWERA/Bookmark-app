@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bookmark app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body onload="retrieveBookmarks()">
+    <div class="container">  
+        <a href="/" style="text-decoration:none;"><h1 class="main-title"> <i class="fa fa-bookmark"></i>Bookmark app</h1> </a>
+        <hr class="main-hr">
+        <div >
+          <div class="row gap-2 justify-content-center added-bookmarks" id="bookmarksList"></div>    
+        </div>
+        <form id="form"> 
+            <h1> Add a bookmark</h1>
+            <hr>
+            <div class="row">
+                <div class="fields-labels">
+                  <label>Title</label>
+                </div>
+                <div class="input-fields">
+                  <input type="text" placeholder="Title" id="title" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="fields-labels">
+                  <label>Link</label>
+                </div>
+                <div class="input-fields">
+                  <input type="url" placeholder="Link" id="link" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="fields-labels">
+                  <label> Description</label>
+                </div>
+                <div class="input-fields">
+                  <textarea placeholder="Description" id="description"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="fields-labels">
+                  <label>Category</label>
+                </div>
+                <div class="input-fields">
+                  <select id="category">
+                    <option value="Favorite bar">Favorite bar</option>
+                    <option value="Other bookmarks">Other bookmarks</option>
+                  </select>
+                </div>
+              </div>
+       
+              <div class="row">
+                <button type="submit">Done</button>
+              </div>
+        </form> 
+        
+      </div>
+    <script src="index.js"></script>
+  </body>
+</html>
